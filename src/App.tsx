@@ -1,15 +1,18 @@
+import { colors, ThemeProvider } from "@material-ui/core";
 import "./App.css";
-import { Footer } from "./components/footer.component";
 import { Form } from "./components/form.component";
-import { Header } from "./components/header.component";
+import { Layout } from "./components/layout";
+import { theme } from "./theme/app.theme";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Form />
-      <Footer />
-    </>
+    <div style={{ backgroundColor: "red" }}>
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Form />
+        </Layout>
+      </ThemeProvider>
+    </div>
   );
 }
 

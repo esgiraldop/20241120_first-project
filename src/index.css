@@ -11,6 +11,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --background-color: #3E7CB1; /* Background color from your theme */
+  --primary-color: #054A91;   /* Primary color */
+  --secondary-color: #81A4CD; /* Secondary color */
+  --text-primary: #000000;    /* Text primary */
+  --text-secondary: #FFFFFF;  /* Text secondary */
+  --spacing-unit: 16px;    /* Base spacing unit */
 }
 
 a {
@@ -22,12 +28,24 @@ a:hover {
   color: #535bf2;
 }
 
-body {
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, html {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -52,6 +70,37 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
 }
 
 @media (prefers-color-scheme: light) {

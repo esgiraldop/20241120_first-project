@@ -1,0 +1,36 @@
+.navbar {
+    color: var(--text-secondary); /* Text secondary color from theme */
+    border: 2px solid var(--border-color, black); /* Optional border color from theme */
+    width: 100vw;
+    background-color: var(--primary-color); /* Primary theme color */
+    font-size: 24px; /* Font size for navbar links */
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    padding: var(--spacing-medium) var(--spacing-medium); /* Padding from theme */
+    list-style-type: none;
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    gap: var(--spacing-medium); /* Add spacing between menu items */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-secondary); /* Text secondary color from theme */
+    font-family: "Raleway", sans-serif; /* Use theme typography */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--secondary-color); /* Secondary color for hover effect */
+}

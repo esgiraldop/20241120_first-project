@@ -7,7 +7,7 @@ interface IForm {
   password: string;
 }
 
-export const Form = () => {
+export const Form = (): React.JSX.Element => {
   const [formState, setFormState] = useState<IForm>({
     name: "",
     email: "",
