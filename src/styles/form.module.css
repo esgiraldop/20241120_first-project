@@ -1,0 +1,53 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Space between inputs */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit width for better UX */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 24px;
+    border: 2px solid var(--primary-color); /* Theme-based border */
+    border-radius: 8px;
+    background-color: var(--background-color); /* Theme background */
+    color: var(--text-primary); /* Theme text color */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--primary-color); /* Border with theme color */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  
+    /* Placeholder text styling */
+    color: var(--text-secondary);
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .input:focus {
+    border-color: var(--secondary-color); /* Highlighted border */
+    box-shadow: 0 0 4px var(--secondary-color); /* Add focus effect */
+  }
+  
+  .button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--primary-color); /* Button background */
+    color: var(--text-secondary); /* Button text */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  
+    /* Ensure buttons are accessible */
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .button:hover {
+    background-color: var(--secondary-color); /* Button hover effect */
+    transform: scale(1.05); /* Slight enlargement */
+  }
+  

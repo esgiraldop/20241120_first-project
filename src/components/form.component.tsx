@@ -1,4 +1,5 @@
 import React, { ChangeEvent, SyntheticEvent, useState } from "react";
+import styles from "../styles/form.module.css"; // Import CSS module
 
 interface IForm {
   name: string;
@@ -31,12 +32,35 @@ export const Form = (): React.JSX.Element => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input placeholder="Name" name="name" onChange={handleChange} />
-      <input placeholder="Email" name="email" onChange={handleChange} />
-      <input placeholder="Phone number" name="phone" onChange={handleChange} />
-      <input placeholder="Password" name="password" onChange={handleChange} />
-      <button type="submit">Submit</button>
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <input
+        className={styles.input}
+        placeholder="Name"
+        name="name"
+        onChange={handleChange}
+      />
+      <input
+        className={styles.input}
+        placeholder="Email"
+        name="email"
+        onChange={handleChange}
+      />
+      <input
+        className={styles.input}
+        placeholder="Phone number"
+        name="phone"
+        onChange={handleChange}
+      />
+      <input
+        className={styles.input}
+        type="password"
+        placeholder="Password"
+        name="password"
+        onChange={handleChange}
+      />
+      <button className={styles.button} type="submit">
+        Submit
+      </button>
     </form>
   );
 };

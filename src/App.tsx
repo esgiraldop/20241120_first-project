@@ -1,4 +1,4 @@
-import { colors, ThemeProvider } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core";
 import "./App.css";
 import { Form } from "./components/form.component";
 import { Layout } from "./components/layout";
