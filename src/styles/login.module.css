@@ -1,0 +1,10 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+}

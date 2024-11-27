@@ -17,6 +17,9 @@
   --text-primary: #000000;    /* Text primary */
   --text-secondary: #FFFFFF;  /* Text secondary */
   --spacing-unit: 16px;    /* Base spacing unit */
+  --spacing-small: 5px;
+  --spacing-medium: 15px;
+  --spacing-large: 25px;
 }
 
 a {
