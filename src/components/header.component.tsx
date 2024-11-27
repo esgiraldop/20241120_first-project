@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/navbar.module.css";
+import { NavLink } from "react-router";
 
 export const Header = () => {
   return (
@@ -7,13 +8,19 @@ export const Header = () => {
       <div>Logo</div>
       <ul>
         <li>
-          <a href="default.asp">Home</a>
+          <NavLink to="/">
+            <a>Home</a>
+          </NavLink>
         </li>
         <li>
-          <a href="contact.asp">Contact</a>
+          <NavLink to="/login">
+            <a>Login</a>
+          </NavLink>
         </li>
         <li>
-          <a href="about.asp">About</a>
+          <NavLink to="/aboutus">
+            <a>About</a>
+          </NavLink>
         </li>
       </ul>
     </div>
